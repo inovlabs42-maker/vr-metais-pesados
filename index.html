@@ -1,0 +1,30 @@
+<html>
+  <head>
+    <script src="https://aframe.io/releases/1.7.1/aframe.min.js"></script>
+    <script src="https://unpkg.com/@c-frame/aframe-physics-system@4.2.3/dist/aframe-physics-system.min.js"></script>
+    <script src="https://unpkg.com/aframe-environment-component@1.5.x/dist/aframe-environment-component.min.js"></script>
+  </head>
+  <body>
+     <a-scene>
+
+         <a-entity environment="preset:forest;active:true;seed:8;skyType:gradient;skyColor:#24b59f;horizonColor:#eff9b7;lightPosition:-1.2 0.88 -0.55;fog:0.8;ground:noise;groundYScale:4.18;groundTexture:squares;groundColor:#937a24;groundColor2:#987d2e;dressing:trees;dressingAmount:500;dressingColor:#888b1d;dressingScale:1;dressingVariance:10 10 10;gridColor:#c5a543" preset-switcher="" id="environment"><a-entity class="environment" position="0 50 0" light="groundColor:#937a24;intensity:0.6;color:#91dacf;type:hemisphere"></a-entity><a-entity class="environment" position="-1.2 0.88 -0.55" light="shadowCameraLeft:-10;shadowCameraBottom:-10;shadowCameraRight:10;shadowCameraTop:10;intensity:0.6"></a-entity><a-entity rotation="-90 0 0" class="environmentGround environment" scale="1 1 4.18" shadow="cast:false;receive:false"></a-entity><a-entity class="environmentDressing environment"></a-entity><a-sky radius="200" theta-length="110" class="environment" material="shader:gradientshader;topColor:#24b59f;bottomColor:#eff9b7" geometry=""></a-sky></a-entity>
+       
+        <!-- OBJ Model with materials -->
+       <!-- <a-entity obj-model="obj: carro_solar.obj" material="color: #4CAF50; metalness: 0.8" scale="0.05 0.05 0.05" position="-6.70998 0 -24.00997" rotation="-90 0 0"> -->
+
+
+
+     
+        <!-- Basic lighting -->
+        <a-light type="ambient" color="#ccc"></a-light>
+        <a-light type="directional" intensity="1" position="1 2 0"></a-light>
+
+       <a-entity text="value: Metais Pesados Ribeira Algés; color: #FAFAFA; width: 5; anchor: align"
+          position="-0.9 0.2 -3"
+          scale="1.5 1.5 1.5"></a-entity>
+       
+        <!-- Helper: camera with controls -->
+        <a-camera position="0 1.6 1"></a-camera>
+    </a-scene>
+  </body>
+</html>
